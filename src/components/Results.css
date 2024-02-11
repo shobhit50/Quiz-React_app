@@ -1,0 +1,15 @@
+/* Styles for the Results component */
+
+.results {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.results h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.results p {
+    font-size: 1.2rem;
+}

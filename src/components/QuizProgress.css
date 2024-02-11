@@ -1,0 +1,24 @@
+/* Styles for the QuizProgress component */
+
+.quiz-progress {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.quiz-progress h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.quiz-progress p {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.quiz-progress .started {
+    color: green;
+}
+
+.quiz-progress .not-started {
+    color: red;
+}

@@ -1,0 +1,26 @@
+/* Styles for the WelcomeScreen component */
+
+.welcome-screen {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.welcome-screen h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-screen button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.welcome-screen button:hover {
+    background-color: #0056b3;
+}
