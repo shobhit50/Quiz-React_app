@@ -256,7 +256,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className='home-page'>
       {!quizStarted && <WelcomeScreen onStart={handleStart} />}
       {quizStarted && !showResults && (
         <div>
@@ -270,28 +270,31 @@ const App = () => {
       {showResults && (
         <Results score={score} totalQuestions={questions.length} />
       )}
-      <div >
-        <QuizProgress />
-        <p>Selected option: {localStorage.getItem('quizCategory')}</p>
-        <p>Left: {questions.length - currentQuestionIndex - 1} </p>
-      </div>
-
-      <div className="quiz-buttons">
-        <button onClick={() => {
-          localStorage.removeItem('quizScore');
-          localStorage.removeItem('currentQuestionIndex');
-          localStorage.removeItem('quizStarted');
-          // Remove selected option from local storage
-          window.location.reload();
-        }}>Reset Progress</button>
-      </div>
-      {!showResults && (
-        <div className="quiz-buttons">
-          <button onClick={switchQuiz}>Indian Geography Quiz</button>
-          <button onClick={switchQuiz2}>General Knowledge Quiz</button>
+      <div className='progress-card' >
+        <div >
+          <QuizProgress />
+          <p>Selected option: {(localStorage.getItem('quizCategory') || '').toUpperCase()}</p>
+          <div className=' progress-card__left'>
+            <p>Left: {questions.length - currentQuestionIndex - 1} </p>
+          </div>
         </div>
-      )}
 
+        <div className="quiz-buttons">
+          <button onClick={() => {
+            localStorage.removeItem('quizScore');
+            localStorage.removeItem('currentQuestionIndex');
+            localStorage.removeItem('quizStarted');
+            // Remove selected option from local storage
+            window.location.reload();
+          }}>Reset Progress</button>
+        </div>
+        {!showResults && (
+          <div className="quiz-buttons">
+            <button onClick={switchQuiz}>Indian Geography Quiz</button>
+            <button onClick={switchQuiz2}>General Knowledge Quiz</button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -43,18 +43,21 @@
 .quiz-buttons {
   justify-content: center;
   display: flex;
-  margin-top: 20px;
+  padding-bottom: 2rem;
 }
 
 .quiz-buttons button {
-  padding: 10px 20px;
+  background-image: linear-gradient(120deg, #49a9ff, #3984d5, #0a1087);
+  padding: 14px 22px;
   margin-right: 10px;
   border: none;
-  background-color: #007bff;
   color: #fff;
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  border-radius: 20px;
+  font-size: clamp(0.6rem, 1.7vw, 1.3rem);
+
 }
 
 .quiz-buttons button:hover {
@@ -64,4 +67,26 @@
 p {
   text-align: center;
   font-size: 1.2rem;
+}
+
+.progress-card {
+
+  background-color: white;
+  border-radius: 5rem 5rem 0 0;
+  margin-top: 2rem;
+  /* border-top: 1.2px solid black; */
+  box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* .progress-card__left {
+  padding: 1rem;
+  border-right: 1.2px solid black;
+} */
+
+.home-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(235deg, #f9f9f9, #d5dadf, #a3b0b4d9);
 }
